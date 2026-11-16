@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reinsurance-pricing"
+version = "1.0.0"
+description = "Monte Carlo pricing of an Excess of Loss reinsurance treaty using a compound Poisson-Lognormal loss model"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Timothy Uong" }]
+keywords = ["actuarial", "reinsurance", "monte-carlo", "excess-of-loss", "pricing"]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+reinsurance-pricing = "reinsurance_pricing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

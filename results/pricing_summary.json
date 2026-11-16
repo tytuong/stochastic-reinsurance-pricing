@@ -1,0 +1,38 @@
+{
+  "treaty": "GBP 5.0m xs GBP 5.0m (1 reinstatement(s) @ 100%)",
+  "limit": 5000000.0,
+  "retention": 5000000.0,
+  "expected_gross_loss": 14970822.828086657,
+  "expected_layer_loss": 868479.0605822678,
+  "layer_loss_std_error": 5758.921706232821,
+  "layer_loss_ci_95": [
+    857191.5740380515,
+    879766.5471264841
+  ],
+  "prob_layer_hit": 0.28799,
+  "expected_layer_hits": 0.33868,
+  "prob_limit_exhausted": 0.0832,
+  "layer": {
+    "mean": 868479.0605822678,
+    "std": 1821130.9458278816,
+    "var": 9488696.829402866,
+    "tvar": 9959370.579100369,
+    "quantile": 0.995
+  },
+  "gross": {
+    "mean": 14970822.828086657,
+    "std": 8034026.86680477,
+    "var": 50117941.28287954,
+    "tvar": 66094327.71591283,
+    "quantile": 0.995
+  },
+  "capital": 8620217.768820599,
+  "risk_load": 862021.7768820599,
+  "risk_adjusted_premium": 1730500.8374643277,
+  "gross_technical_premium": 2035883.3381933267,
+  "expected_reinstatement_factor": 1.1617726250837412,
+  "upfront_premium": 1752393.9661141345,
+  "rate_on_line": 0.3504787932228269,
+  "payback_years": 2.8532396805082056,
+  "expected_loss_ratio": 0.4265858678095814
+}

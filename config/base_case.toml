@@ -1,0 +1,24 @@
+# Base-case assumptions for the stochastic XoL pricing model.
+# All monetary amounts in GBP. Any key left out falls back to the default in
+# src/reinsurance_pricing/config.py.
+
+[portfolio]
+claim_frequency = 25.0      # expected number of large losses per year (Poisson lambda)
+severity_mean   = 600000.0  # mean individual loss
+severity_cv     = 2.5       # coefficient of variation of individual loss (tail heaviness)
+
+[treaty]
+retention          = 5000000.0  # layer attaches at £5m
+limit              = 5000000.0  # pays up to £5m per loss  ->  £5m xs £5m
+reinstatements     = 1          # number of reinstatements (-1 = unlimited)
+reinstatement_rate = 1.0        # reinstatement premium at 100%, pro rata as to amount
+
+[pricing]
+cost_of_capital  = 0.10   # required annual return on capital
+capital_quantile = 0.995  # 1-in-200 year capital standard
+expense_ratio    = 0.05   # reinsurer expenses as % of gross premium
+brokerage        = 0.10   # broker commission as % of gross premium
+
+[simulation]
+n_years = 100000
+seed    = 2026
